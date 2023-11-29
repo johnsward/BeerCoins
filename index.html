@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Beer Coins</title>
+</head>
+<body>
+    <div class="overlay">
+    <header>
+        <div class="logo">
+        <img src="images/beercoin-logo.png" alt="logo">
+        </div>
+        <nav class="nav-links">
+            <a href="#container">Home</a>
+            <a href="#sec">About</a>
+            <a href="#creators">Creators</a>
+            <a href="#foot">Contact</a>  
+            <button class="btn-logIn">Login</button>
+        </nav>
+    </header>
+    <section>
+        <div class="home-img">
+            <img src="images/mug-with-beer-white-background-beautiful-foam-drops-moisture-glass.jpg" alt="beer">
+        </div>
+    <div class="container">
+        <div class="content">
+            <h1><b>Beer</b> Coins</h1>
+            <p>Keep track of how many beers you<br>owe your friends.</p>
+            <button class="btn-signUp">Sign up</button>
+        </div>
+    </div>
+  
+</section>
+<section>
+    <div class="img-foam">
+        <img src="images/pngkit_beer-png_105524.png" alt="foam">
+    </div>
+    </section>
+
+    <section>
+        <div class="sec">
+            <h2>About<b> us</b></h2>
+            <p>Starting out as an inside-joke between a few friends who never could keep track of time, 
+                a website was created to change all that. <br><br>
+                With the help of Beer Coins you can now keep track of how many beers you owe your friends
+                or even better, how many beers they owe you. 
+                </p>
+                </div>
+            </section>
+
+            
+                <section>
+                <div class="creators">
+                        <h2>Meet the creators:</h2>
+                    <div class="creator-list"> 
+                        <a href="#">JOHN SWÄRD</a> 
+                        <a href="#">JONATAN BREJCHA</a> 
+                        <a href="#">KASPER BROWN</a> 
+                        <a href="#">ARVID ELF</a> 
+                        <a href="#">EDVIN HENRIKSSON</a> 
+                    </div>
+                    <div class="creator-img">
+                    <div class="creator" data-creator="john" onclick="toggleFlip(this)">
+                        <div class="creator-card">
+                        <img src="images/john.jpeg" alt="john">
+                        <div class="creator-info">
+                            <p>Wallahi</p>
+                            </div>
+                        </div>
+                        </div>
+                    
+                        <div class="creator" data-creator="jonte" onclick="toggleFlip(this)">
+                            <div class="creator-card">
+                                <img src="images/jonte.jpeg" alt="jonte">
+                                <div class="creator-info">
+                                    <p>Galen, tung och snabb.</p>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="creator" data-creator="kb" onclick="toggleFlip(this)">
+                        <div class="creator-card">
+                        <img src="images/kb.jpeg" alt="kb">
+                        <div class="creator-info">
+                            <p>Kapten, pappa, stor balle.</p>
+                        </div>
+                        </div>
+                        </div>
+                    <div class="creator" data-creator="arvid" onclick="toggleFlip(this)">
+                        <div class="creator-card">
+                        <img src="images/arvid.jpeg" alt="arvid">
+                        <div class="creator-info">
+                            <p>Amfetamin i blodet när han slår sönder bordet.</p>
+                        </div>
+                        </div>
+                        </div>
+                    <div class="creator" data-creator="edvin" onclick="toggleFlip(this)">
+                        <div class="creator-card">
+                        <img src="images/edvin.jpeg" alt="edvin">
+                        <div class="creator-info">
+                            <p>Massiva skor, ingen vet var han bor.</p>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+
+        <div class="app-download">
+            <h2>Download our app</h2>
+            <p>It's time you get the beers you deserve.</p>
+            <div class="img-app">
+                <img src="images/pngwing.com.png" alt="apps">
+                
+            </div>
+        </div>
+    </section>
+</div>
+
+  
+       <div class="foot">
+        <div class="foot-contact">
+            <a href="#">Contact</a>
+            <p><ion-icon name="mail"></ion-icon></ion-icon> contact@beercoins.com</p>
+            <p><ion-icon name="call"></ion-icon> 031-419417</p>
+        </div>
+              <div class="foot-container">
+                <p>© 2023 Beer Coins. All rights reserved.</p>           
+              </div>
+              <div class="foot-social">
+                <a href="https://www.facebook.com/john.sward.3/" target="blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/johnsward/" target="blank"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="https://twitter.com/" target="blank"><ion-icon name="logo-twitter"></ion-icon></a>
+              </div>
+           
+       </div>
+   
+
+        <div class="wrapper">
+          <span class="icon-close">
+            <ion-icon name="close"></ion-icon>
+            </span>
+
+            <div class="form-box login"> 
+                <h2>Login</h2>
+                <form action="">
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                            <input type="username" required>
+                            <label>Username</label> 
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed">
+                            </ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                            </div>
+                            <div class="remember-forgot">
+                                <label><input type="checkbox">Remember me
+                                </label>
+                                <a href="#">Forgot password?</a>    
+                            </div>
+                            <button type="submit" class="btn">Login
+                            </button>
+                            <div class="login-register">
+                                <p>Don't have an account?<a href="#" class="register-link"> Register</a></p>
+                            </div>
+                </form>
+               
+        </div>
+
+        <div class="form-box register"> 
+            <h2>Registration</h2>
+            <form action="">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="username" required>
+                        <label>Username</label> 
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required>
+                        <label>Email</label> 
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed">
+                        </ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox">I Agree to the Terms & Conditions
+                            </label>
+                             
+                        </div>
+                        <button type="submit" class="btn">Register</button>
+                        <div class="login-register">
+                            <p>Already have an account?<a href="#" class="login-link"> Login</a></p>
+                        </div>
+            </form>
+           
+    </div>
+        </div>
+
+        
+
+       
+     
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

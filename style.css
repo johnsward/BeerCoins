@@ -1,0 +1,749 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif';
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    padding: 50px 50px;
+    z-index: 1000; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: center;
+    max-width: 100%;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
+    
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    /* scroll-snap-stop: always; */
+}
+
+
+
+.logo {
+    font-size: 2em;
+    
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 1rem;
+
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+
+
+.nav-links a {
+    position: relative;
+    font-size: 1.3em;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2rem;
+    
+}
+
+
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: orange;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+}
+
+.btn-logIn {
+    width: 120px;
+    height: 60px;
+    background-color: #333;
+    color: #fff;
+    font-weight: 700;
+    border: 1px solid #333;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 5rem;
+}
+
+.btn-logIn:hover {
+    border: 2px solid black;
+    background-color: black;
+    color: #fff;
+
+}
+
+
+
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    width: 200%;
+    max-width: 400px;
+    padding: 0 15px;
+}
+
+.home-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+}
+
+.home-img img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+.content h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.content p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: italic;
+    color: #333;
+}
+
+.content b {
+    font-size: 5rem;
+    font-weight: 700;
+    color: orange;
+
+}
+
+
+.content .btn-signUp {
+    width: 80%;
+    height: 80px;
+    background-color: #333;
+    color: #fff;
+    font-size: large;
+    font-weight: 700;
+    border: 1px solid #333; 
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    cursor: pointer;
+}   
+
+.content .btn-signUp:hover {
+    border: 2px solid black;
+    background-color: black;
+    color: #fff;
+}
+
+
+
+.sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px solid #333;
+    width: 100%;
+    height: 100%;
+    color:#333;
+}
+
+.sec h2 {
+    position: relative;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 2rem;
+
+}
+
+.sec h2 b{
+    font-size: 1.5em;
+    color: orange;
+    margin-bottom: 2rem;
+}
+
+.sec p {
+    font-size: 1.2em;
+    font-weight: 500;
+    font-style: italic;
+    color: #333;
+    text-align: center;
+}
+.sec h2 b {
+    font-size: 1.2em;
+    font-weight: 700;
+    font-style: italic;
+    color: orange;
+    margin-bottom: 2rem;
+    text-align: center;
+
+}
+
+.sec h2 b::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: orange;
+    border-radius: 5px;
+    transform: scaleX(1);
+
+}
+
+
+.creators {
+    position: relative;
+    display: flex;
+    border-radius: 25px;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column;
+    top: 25%;
+
+
+}
+
+.creator-list {
+    width: 100%; 
+    max-height: 10vh;
+    display: flex;
+    background: orange;
+    border: #fff;
+    border-radius: 25px;
+    justify-content: center; 
+    align-items: center;
+}
+
+.creators h2 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 2em;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+
+}
+
+
+
+.creator-list a {
+    font-size: .9em;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 120px;
+    margin-left: 1%;
+    color: #333;
+  
+}
+
+
+
+
+.creator-img {
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin-left: .5%;
+    border-radius: 25px; 
+    padding: 15px;
+    gap: 10px;
+    margin-right: 10px;
+    
+
+}
+
+.creator-img img {
+    object-fit: cover;
+    object-position: center;
+    height: 320px;
+    width: 280px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+ 
+}
+
+
+.creator-img .creator img {
+    backface-visibility: hidden; 
+    transform-style: preserve-3d; 
+    transition: transform 0.5s ease; 
+}
+
+.creator-img .creator.flipped img {
+    transform: rotateY(180deg); 
+}
+
+
+.creator-img .creator img {
+    height: 320px;
+    width: 290px;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    
+}
+
+.creator-img .creator-card.flipped img {
+    transform: rotateY(180deg);
+    
+}
+
+.creator-card {
+    position: relative;
+    perspective: 1000px; /* Set the perspective for 3D effect */
+    overflow: hidden; /* Ensure the border doesn't affect the rotated content */
+    cursor: pointer; /* Add a pointer cursor to indicate clickability */
+    background: orange;
+}
+
+.creator-card.flipped .creator-image {
+    transform: rotateY(180deg);
+    
+}
+
+
+.creator-info {
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        opacity: 0; /* Initially hide the creator-info */
+        transition: opacity 0.5s ease; /* Add a smooth transition effect */
+        color: #fff;
+    
+    
+}
+
+.creator-card.flipped .creator-info {
+    opacity: 1; /* Display the creator-info on hover */
+    
+}
+
+
+
+
+.img-foam {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    z-index: 1;
+    
+
+} 
+
+.img-foam img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+
+   
+}
+.app-download {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+
+}
+
+.app-download h2 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 4em;
+    color: #333;
+    margin-bottom: 2rem;
+    
+}
+
+.app-download p {
+    position: relative;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-style: italic;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+
+
+ 
+.img-app img {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-app img {
+    width: 220px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.app-download .img-app img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.foot {
+    position: absolute;
+    left: 0;    
+    top: 475%;
+    width: 100%;
+    height: 20%;
+    z-index: 1;
+    background: orange;
+    padding: 20px;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border: 2px solid #333;
+    flex-direction: row;
+
+}
+
+.foot .foot-social {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: 700;
+    bottom: 25%;
+    margin-bottom: 2rem;
+    gap: 10px;
+    
+}
+
+.foot a {
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: 700;
+    color: #333;
+  
+}
+
+.foot-social a:hover {
+    scale: 1.05;
+
+}
+
+.foot-contact {
+    width: 20%;
+    height: 5%;
+    position: relative;
+    text-decoration: none;
+    font-weight: 700;
+    flex-direction: column;
+
+    
+}
+
+.foot-contact a {
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: #333;
+
+}
+
+.foot-contact p {
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    
+}
+
+.foot .foot-container p {
+    position: relative;
+    font-size: 1em;
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 2rem;
+    left: 85%;
+
+
+}
+
+
+
+.wrapper {
+    position: fixed;
+    width: 400px;
+    height: 440px;
+    background: transparent; 
+    border: .1px solid #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20%;
+    transform: translateX(-50%) scale(0);
+    transition: transform .5s ease, height .2s ease;
+    z-index: 2;
+}
+
+
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+   transition: .18s ease;
+   transform: translateX(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+ }
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #333;
+    color: #fff;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.2s;
+    
+}
+
+.wrapper.active-popup {
+    transform: scale(1);
+}
+
+.wrapper.active {
+    height: 520px;
+}
+
+.wrapper .icon-close:hover {
+    background: black;
+}
+
+.wrapper .form-box h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #333;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #333;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent; 
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #333;
+    font-weight: 500;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute; 
+    right: 8px;
+    font-size: 1.2em;
+    color: orange;
+    line-height: 57px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #333;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.remember-forgot label input {
+    accent-color: orange;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #333;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    background-color: #333;
+    border: 2px solid #333;
+    outline: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: orange;
+
+}
+
+.btn:hover {
+    border: 2px solid black;
+    background-color: black;
+    
+}
+
+.login-register {
+    font-size: .9em;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+
+}
+
+.login-register p a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
