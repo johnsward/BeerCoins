@@ -59,6 +59,7 @@ html {
     object-fit: cover;
     object-position: center;
     margin-top: 1rem;
+    transition: 1s ease;
 
 }
 
