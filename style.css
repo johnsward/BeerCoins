@@ -42,7 +42,7 @@ body {
 html {
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    /* scroll-snap-stop: always; */
+    scroll-snap-stop: always;
 }
 
 
