@@ -759,6 +759,10 @@ html {
         padding: 20px;
     }
 
+    * {
+        font-size: 1em;
+    }
+
     .nav-links {
         flex-direction: column;
         align-items: center;
