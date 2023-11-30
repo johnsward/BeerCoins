@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="sidebar-inactive"> <!-- Add the class here -->
+    <div class="main">
+        <header class="header"> <!-- Added a class to identify the header for styling -->
+            <div class="logo">
+                <img src="images/beercoins-logo.png" alt="logo">
+            </div>
+            <nav class="nav-links">
+                <a href="#sec">Stats</a>
+                <a href="#creators">Leaderboards</a>
+                <a href="#foot">Calendar</a>   
+                <div class="sidebarbtn" onclick="toggleSidebar()"><ion-icon name="menu"></ion-icon></div> 
+            </nav>  
+        </header>
+        <div class="sidenav">
+            <a href="#">Your Page</a>
+            <a href="#">Settings</a>
+            <a href="#">Manage friends</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <section>
+           <div class="calendar">
+            
+           </div>
+        </section>
+    </div>
+
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+    

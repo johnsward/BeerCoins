@@ -48,7 +48,7 @@ html {
 
 
 .logo {
-    font-size: 2em;
+    font-size: 1.5em;
     
 }
 
@@ -60,11 +60,13 @@ html {
     object-position: center;
     margin-top: 1rem;
     transition: 1s ease;
+    max-width: 100%;
+    height: auto;
 
 }
 
 .logo img:hover {
-    transform: scale(1.1);
+    transform: rotate(360deg) scale(1.05);
     transition: 0.5s;
 }
 
@@ -73,7 +75,7 @@ html {
 .nav-links a {
     position: relative;
     font-size: 1.3em;
-    color: #333;
+    color: hsl(0, 0%, 20%);
     text-decoration: none;
     font-weight: 500;
     margin-left: 2rem;
@@ -317,6 +319,8 @@ html {
 }
 
 .creator-img img {
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
     height: 320px;
@@ -747,4 +751,19 @@ html {
 
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    /* Add responsive styles here */
+    header {
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Add more responsive styles as needed */
 }
