@@ -765,5 +765,11 @@ html {
         text-align: center;
     }
 
+    .container {
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
     /* Add more responsive styles as needed */
 }
