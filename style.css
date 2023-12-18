@@ -324,7 +324,7 @@ screen and (max-width: 390px) {
 
 
     .foot {
-        max-width: 490px;
+        max-width: 100%;
         flex-direction: column;
         height: 100%;
 
@@ -344,8 +344,8 @@ screen and (max-width: 390px) {
 
     }
 
-    .foot-container  {
-    display: none;
+    .foot-container {
+        display: none;
     }
 
     .foot-social {
@@ -358,7 +358,7 @@ screen and (max-width: 390px) {
     }
 
     .sec p {
-       max-width: 300px;
+        max-width: 300px;
     }
 
     .creators h2 {
@@ -368,19 +368,19 @@ screen and (max-width: 390px) {
         font-size: 2em;
         max-width: 160px;
         color: #fff;
-      }
+    }
 
-   .creator-card p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    height: 48px;
-   }
+    .creator-card p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5em;
+        height: 48px;
+    }
 
-  .creator-section {
-    background: orange;
-  }
+    .creator-section {
+        background: orange;
+    }
 
 
 
@@ -393,9 +393,9 @@ screen and (max-width: 390px) {
     }
 
     .nav-bar-btn {
-        right: 0;
         display: flex;
         font-size: 2em;
+        color: #333;
     }
 
     .logo {
@@ -414,8 +414,9 @@ screen and (max-width: 390px) {
     }
 
     .app-download h2 {
+        width: 260px;
         text-align: center;
-        font-size: 10px;
+        font-size: 2rem;
     }
 
 }
