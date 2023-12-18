@@ -876,7 +876,7 @@ screen and (max-width: 390px) {
     overflow: hidden;
     transform: translateX(-50%) scale(0);
     transition: transform .5s ease, height .2s ease;
-    z-index: 1000;
+    z-index: 10000;
 }
 
 
