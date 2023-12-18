@@ -12,6 +12,9 @@ const homeLink = document.querySelector('a[href="#container"]');
 const contactLink = document.querySelector('a[href="#foot"]');
 const creatorLink = document.querySelector('a[href="#creators"]');
 const homeLogo = document.querySelector('.logo');
+const navBtn = document.querySelector('.nav-bar-btn');
+const navMenu = document.querySelector('.nav-menu');
+const navContent = document.querySelector('.nav-content');
 
 
 registerLink.addEventListener('click', () => {
@@ -114,3 +117,13 @@ btnSignUp.addEventListener('click', () => {
             behavior: 'smooth'
         });
     });
+
+//Show nav-menu when nav-bar-btn is clicked
+navBtn.addEventListener('click', () => {
+    navContent.classList.toggle('active');
+    }
+);
+
+navBtn.addEventListener('click', () => {
+    navBtn.classList.toggle('active');
+});

@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=PT+Sans+Narrow:wght@400;700&display=swap');
 
 
@@ -7,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Kanit', sans-serif';
+
 }
 
 header {
@@ -16,27 +16,55 @@ header {
     width: 100%;
     height: 0px;
     padding: 50px 50px;
-    z-index: 1000; 
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 
 }
 
 section {
-    height: 100vh;
-    scroll-snap-align: center;
-    max-width: 100%;
-
-}
-
-body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    scroll-snap-align: center;
+    width: 100%;
+    overflow-x: hidden;
+
+
+}
+
+.creator-section {
+    height: 100vh;
+    width: 100%;
+    background: orange;
+
+}
+
+.last-section {
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.about-section {
+    height: 100vh;
+    width: 100%;
+
+    flex-direction: column;
+}
+
+body {
     font-family: 'Kanit', sans-serif;
     font-family: 'PT Sans Narrow', sans-serif;
-    
+
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 html {
@@ -49,7 +77,7 @@ html {
 
 .logo {
     font-size: 1.5em;
-    
+
 }
 
 .logo img {
@@ -78,11 +106,16 @@ html {
     color: hsl(0, 0%, 20%);
     text-decoration: none;
     font-weight: 500;
-    margin-left: 2rem;
-    
+    margin-right: 2rem;
+
 }
 
-
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
+}
 
 .nav-links a::after {
     content: '';
@@ -115,7 +148,7 @@ html {
     font-weight: 500;
     cursor: pointer;
     text-decoration: none;
-    margin-left: 5rem;
+
 }
 
 .btn-logIn:hover {
@@ -125,39 +158,126 @@ html {
 
 }
 
+.nav-bar-btn {
+    display: flex;
+    margin-left: 1rem;
+    color: orange;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease;
+    font-size: 1.5em;
+    display: none;
 
+}
+
+.nav-bar-btn.active {
+    background: orange;
+    ;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.nav-menu {
+    float: left;
+
+}
+
+
+.nav-content {
+    display: none;
+}
+
+.nav-content.active {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 15em;
+    background-color: #ffa500;
+    flex-direction: row;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.nav-content.active a {
+    font-size: 1.1em;
+    z-index: 1000;
+    color: #fff;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-content.active a:hover {
+    transform: scale(1.1);
+    color: #333;
+}
+
+.nav-content.active .btn-nav-login {
+    left: 0;
+    width: 120px;
+    height: 60px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.nav-content.active .btn-nav-login:hover {
+    background-color: black;
+    color: #fff;
+}
 
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    width: 200%;
-    max-width: 400px;
-    padding: 0 15px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    height: 100vh;
+
 }
 
 .home-img {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    max-height: 500px;
 }
 
 .home-img img {
     max-width: 100%;
     max-height: 100%;
-    width: auto;
-    height: auto;
 }
+
+.content {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    margin-right: 50%;
+    flex-direction: column;
+
+}
+
 
 
 .content h1 {
     font-size: 5rem;
     font-weight: 700;
     color: #333;
+
 }
 
 .content p {
@@ -174,20 +294,146 @@ html {
 
 }
 
+@media screen and (max-width: 490px),
+screen and (max-width: 690px),
+screen and (max-width: 390px) {
+
+    .body {
+        max-width: 490px;
+        overflow: hidden;
+    }
+
+    .container {
+        margin-right: 0;
+        max-width: 490px;
+    }
+
+    .content {
+        margin-right: 0;
+    }
+
+    .content h1,
+    .content p,
+    .content b {
+        text-align: center;
+    }
+
+    .creator-list {
+        max-width: 390px;
+    }
+
+
+    .foot {
+        max-width: 490px;
+        flex-direction: column;
+        height: 100%;
+
+    }
+
+    .foot-contact {
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        font-weight: 700;
+
+    }
+
+    .foot-contact p {
+        font-size: 1em;
+        width: 180px;
+
+    }
+
+    .foot-container  {
+    display: none;
+    }
+
+    .foot-social {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sec p {
+       max-width: 300px;
+    }
+
+    .creators h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        max-width: 160px;
+        color: #fff;
+      }
+
+   .creator-card p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    height: 48px;
+   }
+
+  .creator-section {
+    background: orange;
+  }
+
+
+
+    header {
+        z-index: 1000;
+        padding: 20px 20px;
+        max-width: 420px;
+        height: 120px;
+        width: 100%;
+    }
+
+    .nav-bar-btn {
+        right: 0;
+        display: flex;
+        font-size: 2em;
+    }
+
+    .logo {
+        z-index: 1000;
+        font-size: 1.1em;
+    }
+
+    .nav-links button {
+        width: 80px;
+        height: 60px;
+        font-size: 1em;
+    }
+
+    .nav-links a {
+        display: none;
+    }
+
+    .app-download h2 {
+        text-align: center;
+        font-size: 10px;
+    }
+
+}
+
 
 .content .btn-signUp {
-    width: 80%;
-    height: 80px;
+    width: 100%;
+    min-height: 80px;
     background-color: #333;
     color: #fff;
     font-size: large;
     font-weight: 700;
-    border: 1px solid #333; 
+    border: 1px solid #333;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     margin-top: 2rem;
     cursor: pointer;
-}   
+}
 
 .content .btn-signUp:hover {
     border: 2px solid black;
@@ -204,7 +450,7 @@ html {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    color:#333;
+    color: #333;
 }
 
 .sec h2 {
@@ -217,7 +463,7 @@ html {
 
 }
 
-.sec h2 b{
+.sec h2 b {
     font-size: 1.5em;
     color: orange;
     margin-bottom: 2rem;
@@ -230,6 +476,7 @@ html {
     color: #333;
     text-align: center;
 }
+
 .sec h2 b {
     font-size: 1.2em;
     font-weight: 700;
@@ -258,30 +505,31 @@ html {
     position: relative;
     display: flex;
     border-radius: 25px;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    top: 25%;
+
 
 
 }
 
-.creator-list {
-    width: 100%; 
-    max-height: 10vh;
+.creator-card p {
     display: flex;
-    background: orange;
-    border: #fff;
-    border-radius: 25px;
-    justify-content: center; 
-    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+    height: 36px;
+    font-weight: 700;
+    color: #fff;
+    background: #333;
+
 }
 
 .creators h2 {
     font-weight: 700;
     font-style: italic;
-    font-size: 2em;
-    color: #333;
+    font-size: 3em;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -295,10 +543,9 @@ html {
     font-size: .9em;
     text-decoration: none;
     font-weight: 700;
-    padding: 120px;
     margin-left: 1%;
     color: #333;
-  
+
 }
 
 
@@ -307,15 +554,13 @@ html {
 .creator-img {
     transition: transform 0.5s ease;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
     margin-left: .5%;
-    border-radius: 25px; 
+    border-radius: 25px;
     padding: 15px;
-    gap: 10px;
+    gap: 5px;
     margin-right: 10px;
-    
-
 }
 
 .creator-img img {
@@ -324,24 +569,24 @@ html {
     object-fit: cover;
     object-position: center;
     height: 320px;
-    width: 280px; 
+    width: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
- 
+
+
+
 }
 
 
 .creator-img .creator img {
-    backface-visibility: hidden; 
-    transform-style: preserve-3d; 
-    transition: transform 0.5s ease; 
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
 }
 
 .creator-img .creator.flipped img {
-    transform: rotateY(180deg); 
+    transform: rotateY(180deg);
 }
 
 
@@ -351,45 +596,58 @@ html {
     backface-visibility: hidden;
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
-    
+
 }
 
 .creator-img .creator-card.flipped img {
     transform: rotateY(180deg);
-    
+
 }
 
 .creator-card {
     position: relative;
-    perspective: 1000px; /* Set the perspective for 3D effect */
-    overflow: hidden; /* Ensure the border doesn't affect the rotated content */
-    cursor: pointer; /* Add a pointer cursor to indicate clickability */
+    perspective: 1000px;
+    /* Set the perspective for 3D effect */
+    overflow: hidden;
+    /* Ensure the border doesn't affect the rotated content */
+    cursor: pointer;
+    /* Add a pointer cursor to indicate clickability */
     background: orange;
 }
 
 .creator-card.flipped .creator-image {
     transform: rotateY(180deg);
-    
+
 }
 
 
 .creator-info {
 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        opacity: 0; /* Initially hide the creator-info */
-        transition: opacity 0.5s ease; /* Add a smooth transition effect */
-        color: #fff;
-    
-    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    /* Initially hide the creator-info */
+    transition: opacity 0.5s ease;
+    /* Add a smooth transition effect */
+    color: #fff;
+
+
+}
+
+.creator-info p {
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 1em;
 }
 
 .creator-card.flipped .creator-info {
-    opacity: 1; /* Display the creator-info on hover */
-    
+    opacity: 1;
+    /* Display the creator-info on hover */
+
 }
 
 
@@ -401,9 +659,9 @@ html {
     height: 100%;
     flex-direction: column;
     z-index: 1;
-    
 
-} 
+
+}
 
 .img-foam img {
     height: 100%;
@@ -412,28 +670,29 @@ html {
     object-position: center;
 
 
-   
+
 }
+
 .app-download {
-    left: 0;
     width: 100%;
     height: 100%;
     flex-direction: column;
     z-index: 1;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 
 
 }
 
 .app-download h2 {
+    position: relative;
     font-weight: 700;
     font-style: italic;
     font-size: 4em;
-    color: #333;
+    color: orange;
     margin-bottom: 2rem;
-    
+
 }
 
 .app-download p {
@@ -447,22 +706,21 @@ html {
 
 
 
- 
+
 .img-app img {
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+
 }
 
 .img-app img {
-    width: 220px;
-    height: 180px;
+    max-width: 220px;
+    max-height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     transition: 1s ease;
 }
 
@@ -472,22 +730,20 @@ html {
 }
 
 .foot {
-    position: absolute;
-    left: 0;   
-    top: 475%; 
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 20%;
+    height: 20vh;
     z-index: 1;
     background: orange;
-    padding: 20px;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-    border: 2px solid #333;
+    border-top: 2px solid #333;
     flex-direction: row;
 
 }
 
-.foot .foot-social {
+.foot-social {
     position: relative;
     display: flex;
     justify-content: center;
@@ -495,10 +751,9 @@ html {
     font-size: 1.5em;
     text-decoration: none;
     font-weight: 700;
-    bottom: 25%;
-    margin-bottom: 2rem;
     gap: 10px;
-    
+    margin-left: 2rem;
+
 }
 
 .foot a {
@@ -506,7 +761,7 @@ html {
     text-decoration: none;
     font-weight: 700;
     color: #333;
-  
+
 }
 
 .foot-social a:hover {
@@ -515,14 +770,14 @@ html {
 }
 
 .foot-contact {
-    width: 20%;
-    height: 5%;
+    max-width: 240px;
     position: relative;
     text-decoration: none;
     font-weight: 700;
     flex-direction: column;
+    padding: 10px;
 
-    
+
 }
 
 .foot-contact a {
@@ -539,7 +794,16 @@ html {
     text-decoration: none;
     font-weight: 500;
     color: #333;
-    
+
+}
+
+.foot-container {
+    max-height: 100%;
+    max-width: 100%;
+    float: right;
+    margin-right: 10px;
+
+
 }
 
 .foot .foot-container p {
@@ -549,9 +813,53 @@ html {
     font-weight: 500;
     color: #333;
     margin-bottom: 2rem;
-    left: 85%;
 
 
+
+}
+
+.nav-menu-inactive {
+    height: 100%;
+    max-width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: orange;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-left: 1px solid #333;
+    transform: scale(0);
+}
+
+.nav-menu a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+
+}
+
+.nav-menu button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 35%;
+}
+
+.nav-menu a:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.nav-menu.active {
+    right: 0;
 }
 
 
@@ -560,19 +868,15 @@ html {
     position: fixed;
     width: 400px;
     height: 440px;
-    background: transparent; 
+    background: transparent;
     border: .1px solid #fff;
     border-radius: 20px;
     backdrop-filter: blur(40px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 20%;
     transform: translateX(-50%) scale(0);
     transition: transform .5s ease, height .2s ease;
-    z-index: 2;
+    z-index: 1000;
 }
 
 
@@ -583,8 +887,8 @@ html {
 }
 
 .wrapper .form-box.login {
-   transition: .18s ease;
-   transform: translateX(0);
+    transition: .18s ease;
+    transform: translateX(0);
 }
 
 .wrapper.active .form-box.login {
@@ -594,6 +898,7 @@ html {
 
 .wrapper .form-box.register {
     position: absolute;
+    top: 0;
     transition: none;
     transform: translateX(400px);
 }
@@ -601,7 +906,7 @@ html {
 .wrapper.active .form-box.register {
     transition: transform .18s ease;
     transform: translateX(0);
- }
+}
 
 .wrapper .icon-close {
     position: absolute;
@@ -619,7 +924,7 @@ html {
     cursor: pointer;
     z-index: 1;
     transition: 0.2s;
-    
+
 }
 
 .wrapper.active-popup {
@@ -664,15 +969,15 @@ html {
 
 }
 
-.input-box input:focus ~ label,
-.input-box input:valid ~ label {
+.input-box input:focus~label,
+.input-box input:valid~label {
     top: -5px;
 }
 
 .input-box input {
     width: 100%;
     height: 100%;
-    background: transparent; 
+    background: transparent;
     border: none;
     outline: none;
     font-size: 1em;
@@ -682,7 +987,7 @@ html {
 }
 
 .input-box .icon {
-    position: absolute; 
+    position: absolute;
     right: 8px;
     font-size: 1.2em;
     color: orange;
@@ -696,7 +1001,7 @@ html {
     margin: -15px 0 15px;
     display: flex;
     justify-content: space-between;
-    
+
 }
 
 .remember-forgot label input {
@@ -730,7 +1035,7 @@ html {
 .btn:hover {
     border: 2px solid black;
     background-color: black;
-    
+
 }
 
 .login-register {
@@ -751,36 +1056,4 @@ html {
 
 .login-register p a:hover {
     text-decoration: underline;
-}
-
-@media screen and (max-width: 768px) {
-    /* Add responsive styles here */
-    header {
-        padding: 20px;
-    }
-
-    * {
-        font-size: 1em;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .container {
-        width: 100%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .creator {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    /* Add more responsive styles as needed */
 }

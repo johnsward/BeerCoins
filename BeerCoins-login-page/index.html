@@ -6,31 +6,141 @@
     <title>My Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="sidebar-inactive"> <!-- Add the class here -->
+<body class="sidebar-inactive"> 
     <div class="main">
-        <header class="header"> <!-- Added a class to identify the header for styling -->
+        <header class="main-header"> 
             <div class="logo">
                 <img src="images/beercoins-logo.png" alt="logo">
             </div>
             <nav class="nav-links">
-                <a href="#sec">Stats</a>
-                <a href="#creators">Leaderboards</a>
-                <a href="#foot">Calendar</a>   
+                <a href="#calendar-wrapper">Calendar</a>
+                <a href="#">Stats</a>
+                <a href="#">Leaderboards</a>   
                 <div class="sidebarbtn" onclick="toggleSidebar()"><ion-icon name="menu"></ion-icon></div> 
             </nav>  
         </header>
         <div class="sidenav">
+            <div class="logo">
+                <img src="images/beercoins-logo.png" alt="logo">
+            </div>
             <a href="#">Your Page</a>
             <a href="#">Settings</a>
             <a href="#">Manage friends</a>
             <a href="#">Contact</a>
+            <a href="#">Log out</a>
+            <div class="sidenav-footer">
+                <p>Beer Coins</p>
+                <p>© 2021</p>
+            </div>
         </div>
+        
+        <!-- <section class="calendar-section">
+            <div class="google-calendar">
+                <iframe src="https://calendar.google.com/calendar/embed?height=500&wkst=1&bgcolor=%23F09300&ctz=Europe%2FStockholm&showPrint=0&showNav=1&showTitle=1&title=Schedule&showTz=0&showCalendars=0&showDate=1&src=OGlkdWtzYzM4cDg2NXBwbTk1czMzbW9zamFvdm1jZDVAaW1wb3J0LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23C0CA33" style="border:solid 1px #777" width="700" height="500" frameborder="0" scrolling="no"></iframe>            </div>
+            </div>
+        </section> -->
+            <section>
+                <div class="friends">
+                    
+                </div>
+                <div class="calendar-wrapper">
+                    <button class="close-calendar">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+            <header class="calendar-header">
+               <p class="current-date"></p>
+               <div class="icons">
+                <span id="prev">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                </span>
+               <span id="next">
+                <ion-icon name="arrow-forward-outline"></ion-icon>    
+               </span>
+               </div>
+            </header>
+            <div class="calendar">
+                <ul class="weeks">
+                    <li>Mon</li>
+                    <li>Tue</li>
+                    <li>Wed</li>
+                    <li>Thu</li>
+                    <li>Fri</li>
+                    <li>Sat</li>
+                    <li>Sun</li>
+                </ul>
+                <ul class="days"></ul>
+            </div>
+                </div>  
 
-        <section>
-           <div class="calendar">
-            
+                <div class="schedule">
+                    <span class="schedule-close">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </span>
+
+                    <div class="schedule-header">
+                        <div class="time">
+                            <p></p>
+                      </div>
+                        <button class="add-event-btn"><ion-icon name="add-outline"></ion-icon></button>
+                    </div>
+                    <div class="day-time">
+                        <ul>
+                            <li>00:00</li>
+                            <li>01:00</li>
+                            <li>02:00</li>
+                            <li>03:00</li>
+                            <li>04:00</li>
+                            <li>05:00</li>
+                            <li>06:00</li>
+                            <li>07:00</li>
+                            <li>08:00</li>
+                            <li>09:00</li>
+                            <li>10:00</li>
+                            <li>11:00</li>
+                            <li>12:00</li>
+                            <li>13:00</li>
+                            <li>14:00</li>
+                            <li>15:00</li>
+                            <li>16:00</li>
+                            <li>17:00</li>
+                            <li>18:00</li>
+                            <li>19:00</li>
+                            <li>20:00</li>
+                            <li>21:00</li>
+                            <li>22:00</li>
+                            <li>23:00</li>
+
+                        </ul>
+                    </div>
            </div>
-        </section>
+
+           <div class="add-event">
+                <span class="close">
+                    <ion-icon name="close-outline"></ion-icon>
+                </span>
+
+                <div class="form-box-event">
+                    <form action="">
+                        <div class="input-box">
+                                <input type="text" required>
+                                <span class="description">
+                                    <ion-icon name="clipboard-outline"></ion-icon>
+                                </span>
+                                <label>Activity</label>
+                </div>
+                <div class="input-box">
+                    <input type="date" required>
+                    <label></label>
+                </div>
+                <div class="input-box">
+                        <input type="time" required>
+                        <label></label>
+                </div>
+           </div>
+              
+           </form>
+              </div> 
+       
     </div>
 
 
