@@ -868,10 +868,9 @@ screen and (max-width: 390px) {
     position: fixed;
     width: 400px;
     height: 440px;
-    background: transparent;
-    border: .1px solid #fff;
+    background: white;
+    border: .1px solid #333;
     border-radius: 20px;
-    backdrop-filter: blur(40px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
     overflow: hidden;
     transform: translateX(-50%) scale(0);
